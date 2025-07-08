@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Prediction Result | Pattern Sense</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      background: url('https://th.bing.com/th/id/OIP.Z5Q8Hne1NpINPVeLMuM6rwHaFN?rs=1&pid=ImgDetMain') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px;
+    }
+
+    .card {
+      background-color: rgba(94, 83, 107, 0.95);
+      padding: 35px 30px;
+      border-radius: 15px;
+      text-align: center;
+      max-width: 450px;
+      width: 100%;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    }
+
+    .card img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      font-weight: 600;
+      color: #f3ebeb;
+    }
+
+    p {
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: #c5bcbc;
+    }
+
+    .btn-custom {
+      background-color: #007bff;
+      color: white;
+      padding: 10px 25px;
+      border-radius: 8px;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 20px;
+    }
+
+    .btn-custom:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h2>Prediction Result</h2>
+
+    <img src="{{ url_for('static', filename='uploads/' + user_image) }}" alt="Uploaded Fabric Image">
+
+    <p><strong>Pattern:</strong> {{ label }}</p>
+    <p><strong>Confidence:</strong> {{ confidence }}</p>
+
+    <a href="{{ url_for('predict_page') }}" class="btn-custom">Try Another Image</a>
+  </div>
+
+</body>
+</html>

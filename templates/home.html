@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pattern Sense | Home</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      background: url('https://th.bing.com/th/id/OIP.8UiC-X4L-2Hco0e_87WCbQHaFF?w=626&h=430&rs=1&pid=ImgDetMain') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card {
+      background-color: rgba(87, 63, 116, 0.92);
+      padding: 40px 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      max-width: 450px;
+      width: 100%;
+    }
+
+    h2 {
+      font-weight: 600;
+      margin-bottom: 20px;
+      color: #ddd0d0;
+    }
+
+    p {
+      font-size: 16px;
+      color: #d8d1d1;
+      margin-bottom: 25px;
+    }
+
+    .btn-custom {
+      background-color: #007bff;
+      color: white;
+      padding: 10px 25px;
+      font-weight: 500;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-custom:hover {
+      background-color: #0056b3;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h2>Welcome to Pattern Sense</h2>
+    <p>Discover fabric patterns using deep learning.</p>
+    <a href="{{ url_for('predict_page') }}" class="btn-custom">Go to Prediction</a>
+  </div>
+
+</body>
+</html>
