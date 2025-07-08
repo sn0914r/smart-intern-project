@@ -1,0 +1,14 @@
+1)python -m venv venv
+
+2).\venv\Scripts\activate
+
+
+first command -- python app.py
+
+numpy error -- pip install numpy==1.26.4 --force-reinstall
+
+ doesn't contain anything -- pip install -r requirements.txt
+
+
+
+if other images are uploaded -- python train_model.py
